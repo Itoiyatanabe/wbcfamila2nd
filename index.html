@@ -39,16 +39,33 @@
       .site-blocks-cover h1 {
         font-size: 1.8rem;
         line-height: 1.4;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
       .typed-words {
-        display: block;
+        display: inline-block;
         margin-top: 10px;
-        min-height: 1.2em; /* 텍스트가 바뀔 때 높이 유지 */
+        min-height: 1.2em;
+      }
+      /* 모바일에서 커서 위치 조정 */
+      .typed-cursor {
+        display: inline-block;
+        margin-top: 10px;
       }
     }
-    /* 타이핑 커서 색상 조정 (선택 사항) */
+    /* 타이핑 커서 스타일 */
     .typed-cursor {
       color: #ef6c00;
+      opacity: 1;
+      -webkit-animation: blink 0.7s infinite;
+      -moz-animation: blink 0.7s infinite;
+      animation: blink 0.7s infinite;
+    }
+    @keyframes blink {
+      0% { opacity: 1; }
+      50% { opacity: 0; }
+      100% { opacity: 1; }
     }
   </style>
 </head>
@@ -115,7 +132,7 @@
               <div class="col-md-10 text-center">
                 <br><br><br><br><br><br><br><br><br>
                 
-                <h1>StakeGod 에이전시 <span class="typed-words"></span></h1>
+                <h1>Stake God 에이전시 <span class="typed-words"></span></h1>
                 <p class="lead mb-5">Stake God 에이전시 <a href="https://t.me/YK133" target="_blank">텔레그램 문의</a></p>
 
                 <div style="margin-top:30px; text-align:center;">
